@@ -1,0 +1,19 @@
+name: hantavirus-nextstrain
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.12
+  - nextstrain-cli
+  - augur
+  - auspice
+  - snakemake
+  - ncbi-datasets-cli
+  - csvtk
+  - jq
+  - mafft
+  - iqtree
+  - treetime
+  - pip
+  - pip:
+      - pre-commit

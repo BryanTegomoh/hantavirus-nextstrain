@@ -1,0 +1,37 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+.snakemake/
+logs/
+benchmarks/
+
+# Local and downloaded data
+data/raw/
+data/private/
+data/ncbi/
+*.zip
+*.zst
+*.gb
+*.gbk
+
+# Workflow products
+ingest/results/
+ingest/data/
+ingest/logs/
+ingest/benchmarks/
+phylogenetic/results/
+phylogenetic/auspice/
+phylogenetic/logs/
+phylogenetic/benchmarks/
+auspice/
+
+# Local Nextstrain state
+.nextstrain/

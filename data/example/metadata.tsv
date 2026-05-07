@@ -1,0 +1,4 @@
+accession	strain	date	country	division	location	host	segment	length	authors	date_released	date_updated	segment_assignment_method	date_precision	qc_status	qc_notes
+EXAMPLE_ANDV_S	EXAMPLE_ANDV_S	2024-03-15	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	s	1867	Example et al.	2024-04-01	2024-04-01	title	day	pass	.
+EXAMPLE_ANDV_M	EXAMPLE_ANDV_M	2024-03	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	m	3655	Example et al.	2024-04-01	2024-04-01	title	month	pass	.
+EXAMPLE_ANDV_L	EXAMPLE_ANDV_L	2024	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	l	6550	Example et al.	2024-04-01	2024-04-01	title	year	pass	.

@@ -1,0 +1,4 @@
+accession	title	strain	date	country	division	location	host	length	authors	date_released	date_updated
+EXAMPLE_ANDV_S	Orthohantavirus andesense isolate EXAMPLE segment S complete sequence	EXAMPLE_ANDV_S	2024-03-15	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	1867	Example et al.	2024-04-01	2024-04-01
+EXAMPLE_ANDV_M	Orthohantavirus andesense isolate EXAMPLE segment M complete sequence	EXAMPLE_ANDV_M	2024-03	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	3655	Example et al.	2024-04-01	2024-04-01
+EXAMPLE_ANDV_L	Orthohantavirus andesense isolate EXAMPLE segment L complete sequence	EXAMPLE_ANDV_L	2024	Argentina	Neuquen	San Martin de los Andes	Homo sapiens	6550	Example et al.	2024-04-01	2024-04-01

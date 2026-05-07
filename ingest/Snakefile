@@ -1,0 +1,17 @@
+"""
+Ingest workflow for Hantavirus Nextstrain builds.
+"""
+
+workdir: workflow.current_basedir
+
+configfile: "defaults/config.yaml"
+
+builds = config["builds"]
+
+rule all:
+    input:
+        expand("results/{build}/metadata.tsv", build=builds),
+        expand("results/{build}/sequences.fasta", build=builds),
+
+include: "rules/fetch_from_ncbi.smk"
+include: "rules/curate.smk"

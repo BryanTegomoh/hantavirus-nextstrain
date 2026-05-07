@@ -1,0 +1,35 @@
+builds:
+  andes_s:
+    segment: s
+    input_metadata: ../ingest/results/andes_s/metadata.tsv
+    input_sequences: ../ingest/results/andes_s/sequences.fasta
+    output: hantavirus_andes_s
+    min_length: 1500
+  andes_m:
+    segment: m
+    input_metadata: ../ingest/results/andes_m/metadata.tsv
+    input_sequences: ../ingest/results/andes_m/sequences.fasta
+    output: hantavirus_andes_m
+    min_length: 3000
+  andes_l:
+    segment: l
+    input_metadata: ../ingest/results/andes_l/metadata.tsv
+    input_sequences: ../ingest/results/andes_l/sequences.fasta
+    output: hantavirus_andes_l
+    min_length: 5500
+  context_s:
+    segment: s
+    input_metadata: ../ingest/results/andes_s/metadata.tsv
+    input_sequences: ../ingest/results/andes_s/sequences.fasta
+    output: hantavirus_context_s
+    min_length: 1500
+
+strain_id_field: accession
+traits:
+  columns:
+    - country
+    - host
+
+export:
+  auspice_config: defaults/auspice_config.json
+  description: defaults/description.md

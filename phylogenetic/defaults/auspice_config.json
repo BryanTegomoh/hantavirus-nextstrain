@@ -1,0 +1,27 @@
+{
+  "title": "Hantavirus",
+  "maintainers": [
+    {
+      "name": "Bryan Tegomoh",
+      "url": "https://github.com/BryanTegomoh"
+    }
+  ],
+  "colorings": [
+    {
+      "key": "country",
+      "title": "Country",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "Host",
+      "type": "categorical"
+    },
+    {
+      "key": "qc_status",
+      "title": "QC status",
+      "type": "categorical"
+    }
+  ],
+  "filters": ["country", "host", "qc_status", "segment_assignment_method"]
+}

@@ -1,0 +1,62 @@
+builds:
+  andes_s:
+    pathogen: Orthohantavirus andesense
+    ncbi_taxon_id: "1980456"
+    scope: andes
+    segment: s
+    output: hantavirus_andes_s
+    priority: 1
+    tree_mode: ml
+  andes_m:
+    pathogen: Orthohantavirus andesense
+    ncbi_taxon_id: "1980456"
+    scope: andes
+    segment: m
+    output: hantavirus_andes_m
+    priority: 2
+    tree_mode: ml
+  andes_l:
+    pathogen: Orthohantavirus andesense
+    ncbi_taxon_id: "1980456"
+    scope: andes
+    segment: l
+    output: hantavirus_andes_l
+    priority: 2
+    tree_mode: ml
+  context_s:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: null
+    scope: context
+    segment: s
+    output: hantavirus_context_s
+    priority: 3
+    tree_mode: ml
+
+segment_lengths:
+  s:
+    min: 1200
+    max: 2300
+  m:
+    min: 3200
+    max: 4200
+  l:
+    min: 6000
+    max: 7000
+
+required_metadata_columns:
+  - accession
+  - strain
+  - date
+  - country
+  - division
+  - location
+  - host
+  - segment
+  - length
+  - authors
+  - date_released
+  - date_updated
+  - segment_assignment_method
+  - date_precision
+  - qc_status
+  - qc_notes

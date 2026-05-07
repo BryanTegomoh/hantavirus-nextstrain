@@ -1,0 +1,31 @@
+ncbi_taxon_id: "1980456"
+ncbi_taxon_name: Orthohantavirus andesense
+
+builds:
+  andes_s:
+    segment: s
+  andes_m:
+    segment: m
+  andes_l:
+    segment: l
+
+ncbi_datasets_fields:
+  - accession
+  - sourcedb
+  - sra-accs
+  - isolate-lineage
+  - geo-region
+  - geo-location
+  - isolate-collection-date
+  - release-date
+  - update-date
+  - length
+  - host-name
+  - isolate-lineage-source
+  - biosample-acc
+  - submitter-names
+  - submitter-affiliation
+  - submitter-country
+
+example_metadata: ../data/example/raw_metadata.tsv
+example_sequences: ../data/example/raw_sequences.fasta
