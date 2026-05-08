@@ -1,12 +1,12 @@
-ncbi_taxon_id: "1980456"
-ncbi_taxon_name: Orthohantavirus andesense
+ncbi_taxon_id: "2560583"
+ncbi_taxon_name: Orthohantavirus
 
 builds:
-  andes_s:
+  ortho_s:
     segment: s
-  andes_m:
+  ortho_m:
     segment: m
-  andes_l:
+  ortho_l:
     segment: l
 
 ncbi_datasets_fields:

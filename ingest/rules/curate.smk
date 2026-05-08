@@ -1,13 +1,11 @@
 """
-Curate records into segment-specific metadata and FASTA files.
-
-The scaffold uses the example records until NCBI field mapping is finalized.
+Curate NCBI records into segment-specific metadata and FASTA files.
 """
 
 rule curate_segment:
     input:
-        metadata=config["example_metadata"],
-        sequences=config["example_sequences"],
+        metadata="data/raw_metadata.tsv",
+        sequences="data/sequences.fasta",
     output:
         metadata="results/{build}/metadata.tsv",
         sequences="results/{build}/sequences.fasta",

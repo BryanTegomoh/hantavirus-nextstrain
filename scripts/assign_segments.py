@@ -8,6 +8,54 @@ import csv
 import re
 from pathlib import Path
 
+# Maps NCBI dataformat TSV human-readable column headers to our internal schema.
+# Internal field names pass through unchanged, so this handles both raw NCBI
+# output and already-normalized input.
+NCBI_FIELD_MAP: dict[str, str] = {
+    "Accession": "accession",
+    "Isolate Lineage": "strain",
+    "Geographic Region": "country",
+    "Geographic Location": "_geo_location",  # parsed below
+    "Isolate Collection date": "date",
+    "Release Date": "date_released",
+    "Update Date": "date_updated",
+    "Nucleotide Length": "length",
+    "Host Name": "host",
+    "Submitter Names": "authors",
+    "Source Database": "sourcedb",
+    "BioSample Accession": "biosample_acc",
+    "Submitter Affiliation": "submitter_affiliation",
+    "Submitter Country": "submitter_country",
+    "Isolate Lineage Source": "isolate_lineage_source",
+    "SRA Accessions": "sra_accs",
+}
+
+
+def normalize_row(row: dict[str, str]) -> dict[str, str]:
+    """Rename NCBI dataformat column headers to internal schema names."""
+    out: dict[str, str] = {}
+    for key, value in row.items():
+        mapped = NCBI_FIELD_MAP.get(key, key)
+        out[mapped] = value
+
+    # NCBI geo-location format: "Country: State/Province" or "Country: State: City"
+    if "_geo_location" in out:
+        geo = out.pop("_geo_location", "")
+        if ": " in geo:
+            _, sub = geo.split(": ", 1)
+            parts = sub.split(": ", 1)
+            out.setdefault("division", parts[0])
+            out.setdefault("location", parts[1] if len(parts) > 1 else "")
+        else:
+            out.setdefault("division", "")
+            out.setdefault("location", "")
+
+    # Normalize date separators (NCBI occasionally uses slashes)
+    if "date" in out:
+        out["date"] = out["date"].replace("/", "-")
+
+    return out
+
 SEGMENT_RANGES = {
     "s": (1200, 2300),
     "m": (3200, 4200),
@@ -143,7 +191,7 @@ def curate_rows(rows: list[dict[str, str]], filter_segment: str | None) -> list[
 
 def read_metadata(path: Path) -> list[dict[str, str]]:
     with path.open(newline="") as handle:
-        return list(csv.DictReader(handle, delimiter="\t"))
+        return [normalize_row(row) for row in csv.DictReader(handle, delimiter="\t")]
 
 
 def write_metadata(rows: list[dict[str, str]], path: Path) -> None:
