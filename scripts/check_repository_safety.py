@@ -14,7 +14,9 @@ BLOCKED_PATH_PARTS = {
     "ingest/data",
     "phylogenetic/results",
     "phylogenetic/auspice",
-    "auspice",
+    # Root auspice/ is intentionally committable for Nextstrain community builds.
+    # Block only the intermediate by_build subdirectory.
+    "auspice/by_build",
 }
 
 BLOCKED_SUFFIXES = {

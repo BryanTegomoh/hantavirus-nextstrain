@@ -1,6 +1,6 @@
 PYTHON ?= python3
 
-.PHONY: help setup validate validate-example ingest-example ingest build view clean
+.PHONY: help setup validate validate-example ingest-example ingest build copy-auspice view clean
 
 help:
 	@printf "Targets:\n"
@@ -9,6 +9,7 @@ help:
 	@printf "  ingest-example   Run deterministic segment assignment on example data\n"
 	@printf "  ingest           Run the Nextstrain ingest workflow\n"
 	@printf "  build            Run the Nextstrain phylogenetic workflow\n"
+	@printf "  copy-auspice     Copy final Auspice JSONs to root auspice/ for community build\n"
 	@printf "  view             Open local Auspice datasets with Nextstrain\n"
 	@printf "  clean            Remove workflow outputs and local caches\n"
 
@@ -31,13 +32,18 @@ ingest-example:
 		--output-sequences data/example/sequences.fasta
 
 ingest:
-	nextstrain build ingest
+	cd ingest && snakemake --cores all
 
 build:
-	nextstrain build phylogenetic
+	cd phylogenetic && snakemake --cores all
+	$(MAKE) copy-auspice
+
+copy-auspice:
+	mkdir -p auspice
+	cp phylogenetic/auspice/hantavirus-nextstrain_*.json auspice/
 
 view:
-	nextstrain view phylogenetic
+	auspice view --datasetDir auspice
 
 clean:
 	rm -rf .snakemake ingest/.snakemake phylogenetic/.snakemake \

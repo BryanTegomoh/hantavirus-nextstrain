@@ -22,7 +22,7 @@ data/ncbi/
 *.gb
 *.gbk
 
-# Workflow products
+# Workflow intermediate products (not for commit)
 ingest/results/
 ingest/data/
 ingest/logs/
@@ -31,7 +31,10 @@ phylogenetic/results/
 phylogenetic/auspice/
 phylogenetic/logs/
 phylogenetic/benchmarks/
-auspice/
+
+# Root auspice/ holds final JSONs committed for Nextstrain community builds.
+# The by_build/ subdirectory contains intermediate renamed copies only.
+auspice/by_build/
 
 # Local Nextstrain state
 .nextstrain/
