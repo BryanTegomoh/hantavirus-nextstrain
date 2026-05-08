@@ -1,8 +1,8 @@
 # Hantavirus Nextstrain Workflow
 
-Private working repository for a pan-Orthohantavirus Nextstrain workflow. The primary output is segment-specific maximum-likelihood trees for all publicly available Orthohantavirus sequences from NCBI, with Andes virus clustering naturally within the S tree alongside other New World hantaviruses.
+Public working repository for a pan-Orthohantavirus Nextstrain workflow. The primary output is segment-specific maximum-likelihood trees for all publicly available Orthohantavirus sequences from NCBI, with Andes virus clustering naturally within the S tree alongside other New World hantaviruses.
 
-Target taxon: `Orthohantavirus`, NCBI taxon `2560583`. Builds: S, M, and L segment trees. Segments are built independently and not concatenated.
+Target taxon: `Orthohantavirus`, NCBI taxon `1980442`. Builds: S, M, and L segment trees. Segments are built independently and not concatenated.
 
 ## Rationale
 
@@ -11,7 +11,7 @@ WHO and ECDC describe the May 2026 cruise-ship cluster as Andes hantavirus-relat
 - [WHO Disease Outbreak News, 4 May 2026](https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON599)
 - [ECDC response, 6 May 2026](https://www.ecdc.europa.eu/en/news-events/cruise-ship-hantavirus-outbreak-ecdc-response-activated)
 - [ECDC threat assessment brief, 6 May 2026](https://www.ecdc.europa.eu/sites/default/files/documents/TAB-hantavirus-06052026.pdf)
-- [NCBI Taxonomy: Orthohantavirus](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=2560583)
+- [NCBI Taxonomy: Orthohantavirus](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=1980442)
 - [ICTV Orthohantavirus genus report](https://ictv.global/report/chapter/hantaviridae/hantaviridae/mammantavirinae/orthohantavirus)
 
 ## Repository Layout
@@ -67,7 +67,7 @@ Output JSON files follow the Nextstrain community naming convention:
 
 ## Nextstrain Community Build
 
-Once the repo is public on GitHub, the trees are available at:
+The public community trees are available at:
 
 ```
 nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S
