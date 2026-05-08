@@ -1,28 +1,22 @@
 builds:
-  andes_s:
+  ortho_s:
     segment: s
-    input_metadata: ../ingest/results/andes_s/metadata.tsv
-    input_sequences: ../ingest/results/andes_s/sequences.fasta
-    output: hantavirus_andes_s
+    input_metadata: ../ingest/results/ortho_s/metadata.tsv
+    input_sequences: ../ingest/results/ortho_s/sequences.fasta
+    output: hantavirus-nextstrain_S
     min_length: 1500
-  andes_m:
+  ortho_m:
     segment: m
-    input_metadata: ../ingest/results/andes_m/metadata.tsv
-    input_sequences: ../ingest/results/andes_m/sequences.fasta
-    output: hantavirus_andes_m
+    input_metadata: ../ingest/results/ortho_m/metadata.tsv
+    input_sequences: ../ingest/results/ortho_m/sequences.fasta
+    output: hantavirus-nextstrain_M
     min_length: 3000
-  andes_l:
+  ortho_l:
     segment: l
-    input_metadata: ../ingest/results/andes_l/metadata.tsv
-    input_sequences: ../ingest/results/andes_l/sequences.fasta
-    output: hantavirus_andes_l
+    input_metadata: ../ingest/results/ortho_l/metadata.tsv
+    input_sequences: ../ingest/results/ortho_l/sequences.fasta
+    output: hantavirus-nextstrain_L
     min_length: 5500
-  context_s:
-    segment: s
-    input_metadata: ../ingest/results/andes_s/metadata.tsv
-    input_sequences: ../ingest/results/andes_s/sequences.fasta
-    output: hantavirus_context_s
-    min_length: 1500
 
 strain_id_field: accession
 traits:

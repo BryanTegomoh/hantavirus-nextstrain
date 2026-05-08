@@ -1,35 +1,27 @@
 builds:
-  andes_s:
-    pathogen: Orthohantavirus andesense
-    ncbi_taxon_id: "1980456"
-    scope: andes
+  ortho_s:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: "2560583"
+    scope: orthohantavirus
     segment: s
-    output: hantavirus_andes_s
+    output: hantavirus-nextstrain_S
     priority: 1
     tree_mode: ml
-  andes_m:
-    pathogen: Orthohantavirus andesense
-    ncbi_taxon_id: "1980456"
-    scope: andes
-    segment: m
-    output: hantavirus_andes_m
-    priority: 2
-    tree_mode: ml
-  andes_l:
-    pathogen: Orthohantavirus andesense
-    ncbi_taxon_id: "1980456"
-    scope: andes
-    segment: l
-    output: hantavirus_andes_l
-    priority: 2
-    tree_mode: ml
-  context_s:
+  ortho_m:
     pathogen: Orthohantavirus
-    ncbi_taxon_id: null
-    scope: context
-    segment: s
-    output: hantavirus_context_s
-    priority: 3
+    ncbi_taxon_id: "2560583"
+    scope: orthohantavirus
+    segment: m
+    output: hantavirus-nextstrain_M
+    priority: 2
+    tree_mode: ml
+  ortho_l:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: "2560583"
+    scope: orthohantavirus
+    segment: l
+    output: hantavirus-nextstrain_L
+    priority: 2
     tree_mode: ml
 
 segment_lengths:

@@ -1,5 +1,5 @@
 {
-  "title": "Hantavirus",
+  "title": "Orthohantavirus phylogeny",
   "maintainers": [
     {
       "name": "Bryan Tegomoh",
@@ -18,10 +18,15 @@
       "type": "categorical"
     },
     {
+      "key": "segment",
+      "title": "Segment",
+      "type": "categorical"
+    },
+    {
       "key": "qc_status",
       "title": "QC status",
       "type": "categorical"
     }
   ],
-  "filters": ["country", "host", "qc_status", "segment_assignment_method"]
+  "filters": ["country", "host", "segment", "qc_status", "segment_assignment_method"]
 }

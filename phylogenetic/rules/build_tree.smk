@@ -15,7 +15,8 @@ rule align:
         augur align \
             --sequences {input.sequences:q} \
             --output {output.alignment:q} \
-            --fill-gaps
+            --fill-gaps \
+            --nthreads auto
         """
 
 
@@ -32,7 +33,8 @@ rule tree:
         augur tree \
             --alignment {input.alignment:q} \
             --output {output.tree:q} \
-            --method iqtree
+            --method iqtree \
+            --nthreads auto
         """
 
 
