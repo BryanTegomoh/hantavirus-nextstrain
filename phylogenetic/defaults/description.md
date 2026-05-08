@@ -4,4 +4,4 @@ Segment-specific maximum-likelihood trees for all publicly available Orthohantav
 
 Interpret segment trees carefully. S, M, and L may not support identical relationships, and discordance between segments is a signal of reassortment rather than noise.
 
-Data source: NCBI Virus, taxon 2560583 (Orthohantavirus).
+Data source: NCBI Virus, taxon 1980442 (genus *Orthohantavirus*).

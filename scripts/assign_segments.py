@@ -12,21 +12,22 @@ from pathlib import Path
 # Internal field names pass through unchanged, so this handles both raw NCBI
 # output and already-normalized input.
 NCBI_FIELD_MAP: dict[str, str] = {
+    # Exact column headers produced by: dataformat tsv virus-genome
     "Accession": "accession",
     "Isolate Lineage": "strain",
-    "Geographic Region": "country",
+    "Geographic Region": "_geo_region",  # continent-level fallback
     "Geographic Location": "_geo_location",  # parsed below
     "Isolate Collection date": "date",
-    "Release Date": "date_released",
-    "Update Date": "date_updated",
-    "Nucleotide Length": "length",
+    "Release date": "date_released",
+    "Update date": "date_updated",
+    "Length": "length",
     "Host Name": "host",
     "Submitter Names": "authors",
-    "Source Database": "sourcedb",
-    "BioSample Accession": "biosample_acc",
+    "Source database": "sourcedb",
+    "BioSample accession": "biosample_acc",
     "Submitter Affiliation": "submitter_affiliation",
     "Submitter Country": "submitter_country",
-    "Isolate Lineage Source": "isolate_lineage_source",
+    "Isolate Lineage source": "isolate_lineage_source",
     "SRA Accessions": "sra_accs",
 }
 
@@ -38,17 +39,21 @@ def normalize_row(row: dict[str, str]) -> dict[str, str]:
         mapped = NCBI_FIELD_MAP.get(key, key)
         out[mapped] = value
 
-    # NCBI geo-location format: "Country: State/Province" or "Country: State: City"
-    if "_geo_location" in out:
-        geo = out.pop("_geo_location", "")
-        if ": " in geo:
-            _, sub = geo.split(": ", 1)
-            parts = sub.split(": ", 1)
-            out.setdefault("division", parts[0])
-            out.setdefault("location", parts[1] if len(parts) > 1 else "")
-        else:
-            out.setdefault("division", "")
-            out.setdefault("location", "")
+    # NCBI Geographic Location format is "Country", "Country: Division",
+    # or "Country: Division: Location". Parse country from this field; fall
+    # back to Geographic Region (continent) only when Geographic Location is
+    # absent.
+    geo = out.pop("_geo_location", "").strip()
+    geo_region = out.pop("_geo_region", "").strip()
+    if geo:
+        parts = [p.strip() for p in geo.split(":", 2)]
+        out.setdefault("country", parts[0])
+        out.setdefault("division", parts[1] if len(parts) > 1 else "")
+        out.setdefault("location", parts[2] if len(parts) > 2 else "")
+    else:
+        out.setdefault("country", geo_region)
+        out.setdefault("division", "")
+        out.setdefault("location", "")
 
     # Normalize date separators (NCBI occasionally uses slashes)
     if "date" in out:

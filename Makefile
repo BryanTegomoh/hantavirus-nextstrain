@@ -40,7 +40,9 @@ build:
 
 copy-auspice:
 	mkdir -p auspice
-	cp phylogenetic/auspice/hantavirus-nextstrain_*.json auspice/
+	cp phylogenetic/auspice/ortho_s.json auspice/hantavirus-nextstrain_S.json 2>/dev/null || true
+	cp phylogenetic/auspice/ortho_m.json auspice/hantavirus-nextstrain_M.json 2>/dev/null || true
+	cp phylogenetic/auspice/ortho_l.json auspice/hantavirus-nextstrain_L.json 2>/dev/null || true
 
 view:
 	auspice view --datasetDir auspice

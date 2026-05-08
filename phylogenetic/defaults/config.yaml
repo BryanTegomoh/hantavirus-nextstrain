@@ -3,19 +3,19 @@ builds:
     segment: s
     input_metadata: ../ingest/results/ortho_s/metadata.tsv
     input_sequences: ../ingest/results/ortho_s/sequences.fasta
-    output: hantavirus-nextstrain_S
+    output: ortho_s
     min_length: 1500
   ortho_m:
     segment: m
     input_metadata: ../ingest/results/ortho_m/metadata.tsv
     input_sequences: ../ingest/results/ortho_m/sequences.fasta
-    output: hantavirus-nextstrain_M
+    output: ortho_m
     min_length: 3000
   ortho_l:
     segment: l
     input_metadata: ../ingest/results/ortho_l/metadata.tsv
     input_sequences: ../ingest/results/ortho_l/sequences.fasta
-    output: hantavirus-nextstrain_L
+    output: ortho_l
     min_length: 5500
 
 strain_id_field: accession

@@ -7,15 +7,13 @@ workdir: workflow.current_basedir
 configfile: "defaults/config.yaml"
 
 builds = config["builds"]
-output_to_build = {build["output"]: name for name, build in builds.items()}
 
 wildcard_constraints:
     build="|".join(builds.keys()),
-    output="|".join(output_to_build.keys()),
 
 rule all:
     input:
-        expand("auspice/{output}.json", output=output_to_build.keys()),
+        expand("auspice/{build}.json", build=builds.keys()),
 
 include: "rules/prepare_inputs.smk"
 include: "rules/build_tree.smk"

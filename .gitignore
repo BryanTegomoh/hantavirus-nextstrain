@@ -38,3 +38,4 @@ auspice/by_build/
 
 # Local Nextstrain state
 .nextstrain/
+.claude/

@@ -1,7 +1,7 @@
 builds:
   ortho_s:
     pathogen: Orthohantavirus
-    ncbi_taxon_id: "2560583"
+    ncbi_taxon_id: "1980442"
     scope: orthohantavirus
     segment: s
     output: hantavirus-nextstrain_S
@@ -9,7 +9,7 @@ builds:
     tree_mode: ml
   ortho_m:
     pathogen: Orthohantavirus
-    ncbi_taxon_id: "2560583"
+    ncbi_taxon_id: "1980442"
     scope: orthohantavirus
     segment: m
     output: hantavirus-nextstrain_M
@@ -17,7 +17,7 @@ builds:
     tree_mode: ml
   ortho_l:
     pathogen: Orthohantavirus
-    ncbi_taxon_id: "2560583"
+    ncbi_taxon_id: "1980442"
     scope: orthohantavirus
     segment: l
     output: hantavirus-nextstrain_L
