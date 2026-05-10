@@ -26,8 +26,10 @@ tips depend on the eligible NCBI records present when the workflow is run.
 ## What The Time Axis Means
 
 The time-resolved builds use `augur refine --timetree` to estimate node dates
-from sampling dates and genetic divergence. In Auspice, this adds calendar-date
-coordinates (`num_date`) so the tree can be viewed with time on the x axis.
+from sampling dates and genetic divergence. In Auspice, this adds `num_date`
+coordinates in decimal calendar-year units. A tip sampled on January 1, 2025 is
+therefore plotted near 2025.0. The same unit is used for model-estimated
+internal nodes.
 
 The 2010 filter applies to sampled tips only. Internal node dates are model
 estimates from TreeTime. In a pan-Orthohantavirus tree, deep divergence can push
