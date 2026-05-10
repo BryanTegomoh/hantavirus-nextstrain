@@ -31,6 +31,7 @@ builds:
       - day
       - month
       - year
+    min_year: 2010
     clock_filter_iqd: 4
   ortho_m_time:
     segment: m
@@ -43,6 +44,7 @@ builds:
       - day
       - month
       - year
+    min_year: 2010
     clock_filter_iqd: 4
   ortho_l_time:
     segment: l
@@ -55,6 +57,7 @@ builds:
       - day
       - month
       - year
+    min_year: 2010
     clock_filter_iqd: 4
 
 strain_id_field: accession

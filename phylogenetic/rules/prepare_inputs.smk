@@ -10,6 +10,11 @@ def date_precisions(wildcards):
     return ",".join(build_config(wildcards).get("date_precisions", []))
 
 
+def min_year(wildcards):
+    val = build_config(wildcards).get("min_year")
+    return str(val) if val is not None else ""
+
+
 rule prepare_inputs:
     input:
         metadata=lambda wildcards: build_config(wildcards)["input_metadata"],
@@ -20,6 +25,7 @@ rule prepare_inputs:
     params:
         tree_mode=lambda wildcards: build_config(wildcards).get("tree_mode", "ml"),
         date_precisions=date_precisions,
+        min_year=min_year,
     log:
         "logs/{build}/prepare_inputs.txt"
     shell:
@@ -31,7 +37,8 @@ rule prepare_inputs:
                 --sequences {input.sequences:q} \
                 --output-metadata {output.metadata:q} \
                 --output-sequences {output.sequences:q} \
-                --date-precisions {params.date_precisions:q}
+                --date-precisions {params.date_precisions:q} \
+                $([ -n {params.min_year:q} ] && echo "--min-year {params.min_year}")
         else
             cp {input.metadata:q} {output.metadata:q}
             cp {input.sequences:q} {output.sequences:q}
