@@ -29,3 +29,8 @@ Initial build order:
 4. `context_s`
 
 TreeTime should only be enabled after date precision and temporal signal checks pass on real data.
+
+The optional `ortho_s_time`, `ortho_m_time`, and `ortho_l_time` builds filter to
+records with usable collection dates and run TreeTime through
+`augur refine --timetree`. See [temporal-analysis.md](temporal-analysis.md) for
+interpretation guidance.

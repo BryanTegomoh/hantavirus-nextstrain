@@ -58,12 +58,16 @@ make view
 
 The canonical build list lives in [config/builds.yaml](config/builds.yaml):
 
-- `ortho_s` — all Orthohantavirus S-segment sequences (primary)
-- `ortho_m` — all Orthohantavirus M-segment sequences
-- `ortho_l` — all Orthohantavirus L-segment sequences
+- `ortho_s`: all Orthohantavirus S-segment sequences (primary)
+- `ortho_m`: all Orthohantavirus M-segment sequences
+- `ortho_l`: all Orthohantavirus L-segment sequences
+- `ortho_s_time`: dated S-segment records for exploratory time-resolved analysis
+- `ortho_m_time`: dated M-segment records for exploratory time-resolved analysis
+- `ortho_l_time`: dated L-segment records for exploratory time-resolved analysis
 
 Output JSON files follow the Nextstrain community naming convention:
-`auspice/hantavirus-nextstrain_S.json`, `_M.json`, `_L.json`
+`auspice/hantavirus-nextstrain_S.json`, `_M.json`, `_L.json`, and
+`_S_time.json`, `_M_time.json`, `_L_time.json`
 
 ## Nextstrain Community Build
 
@@ -88,4 +92,4 @@ git diff --check
 
 ## Current Status
 
-Active development. Environment setup required before running the full workflow — see [docs/setup.md](docs/setup.md).
+Active development. Environment setup required before running the full workflow. See [docs/setup.md](docs/setup.md).
