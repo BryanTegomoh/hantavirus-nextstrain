@@ -8,9 +8,9 @@ Public working repository for a pan-Orthohantavirus Nextstrain workflow. The pri
 [L segment (1,099)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L)
 
 **Time-resolved trees (dated records only):**
-[S segment (2,338)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S_time) &nbsp;|&nbsp;
-[M segment (1,276)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M_time) &nbsp;|&nbsp;
-[L segment (955)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L_time)
+[S segment (2,338)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S/time) &nbsp;|&nbsp;
+[M segment (1,276)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M/time) &nbsp;|&nbsp;
+[L segment (955)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L/time)
 
 Target taxon: `Orthohantavirus`, NCBI taxon `1980442`. Builds: S, M, and L segment trees. Segments are built independently and not concatenated.
 
@@ -88,9 +88,9 @@ nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S
 nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M
 nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L
 
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S_time
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M_time
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L_time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S/time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M/time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L/time
 ```
 
 ## Data Governance
