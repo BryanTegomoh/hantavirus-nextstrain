@@ -7,7 +7,7 @@ Public working repository for a pan-Orthohantavirus Nextstrain workflow. The pri
 [M segment (1,636)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M) &nbsp;|&nbsp;
 [L segment (1,099)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L)
 
-**Time-resolved trees (exploratory — dated records ≥ 2010):**
+**Time-resolved trees (exploratory, dated records from 2010):**
 [S segment](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S/time) &nbsp;|&nbsp;
 [M segment](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M/time) &nbsp;|&nbsp;
 [L segment](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L/time)
