@@ -6,6 +6,9 @@
       "url": "https://github.com/BryanTegomoh"
     }
   ],
+  "display_defaults": {
+    "distance_measure": "div"
+  },
   "colorings": [
     {
       "key": "country",

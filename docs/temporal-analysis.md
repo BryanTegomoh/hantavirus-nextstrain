@@ -35,6 +35,10 @@ some internal node estimates far earlier than the modern sampling window. Those
 dates should be treated as exploratory clock behavior, not as sampled records
 before 2010.
 
+For this reason, public Auspice datasets open on the divergence x-axis by
+default. The time axis remains available for clock review, but it is not the
+default interpretation surface.
+
 The estimated rate should be interpreted separately for S, M, and L. A single
 pan-Orthohantavirus rate can be misleading because the dataset spans deep
 divergence, multiple hosts, multiple countries, and segmented genomes with
