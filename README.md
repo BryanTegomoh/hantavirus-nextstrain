@@ -3,14 +3,14 @@
 Public working repository for a pan-Orthohantavirus Nextstrain workflow. The primary output is segment-specific maximum-likelihood trees for all publicly available Orthohantavirus sequences from NCBI, with Andes virus clustering naturally within the S tree alongside other New World hantaviruses.
 
 **Maximum-likelihood trees (all sequences):**
-[S segment (3,038)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_S) &nbsp;|&nbsp;
-[M segment (1,636)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_M) &nbsp;|&nbsp;
-[L segment (1,099)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_L)
+[S segment (3,038)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S) &nbsp;|&nbsp;
+[M segment (1,636)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M) &nbsp;|&nbsp;
+[L segment (1,099)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L)
 
 **Time-resolved trees (dated records only):**
-[S segment (2,338)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_S_time) &nbsp;|&nbsp;
-[M segment (1,276)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_M_time) &nbsp;|&nbsp;
-[L segment (955)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_L_time)
+[S segment (2,338)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S_time) &nbsp;|&nbsp;
+[M segment (1,276)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M_time) &nbsp;|&nbsp;
+[L segment (955)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L_time)
 
 Target taxon: `Orthohantavirus`, NCBI taxon `1980442`. Builds: S, M, and L segment trees. Segments are built independently and not concatenated.
 
@@ -84,13 +84,13 @@ Output JSON files follow the Nextstrain community naming convention:
 The public community trees are available at:
 
 ```
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_S
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_M
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_L
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L
 
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_S_time
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_M_time
-nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_L_time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/S_time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/M_time
+nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/L_time
 ```
 
 ## Data Governance
