@@ -2,6 +2,11 @@
 
 Public working repository for a pan-Orthohantavirus Nextstrain workflow. The primary output is segment-specific maximum-likelihood trees for all publicly available Orthohantavirus sequences from NCBI, with Andes virus clustering naturally within the S tree alongside other New World hantaviruses.
 
+**Live trees:**
+[S segment (3,038 sequences)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_S) &nbsp;|&nbsp;
+[M segment (1,636 sequences)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_M) &nbsp;|&nbsp;
+[L segment (1,099 sequences)](https://nextstrain.org/community/BryanTegomoh/hantavirus-nextstrain/hantavirus-nextstrain_L)
+
 Target taxon: `Orthohantavirus`, NCBI taxon `1980442`. Builds: S, M, and L segment trees. Segments are built independently and not concatenated.
 
 ## Rationale
