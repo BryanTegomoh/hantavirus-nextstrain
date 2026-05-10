@@ -9,7 +9,7 @@ help:
 	@printf "  ingest-example   Run deterministic segment assignment on example data\n"
 	@printf "  ingest           Run the Nextstrain ingest workflow\n"
 	@printf "  build            Run the Nextstrain phylogenetic workflow\n"
-	@printf "  copy-auspice     Copy final Auspice JSONs to root auspice/ for community build\n"
+	@printf "  copy-auspice     Copy Auspice JSONs to root auspice/ for community build\n"
 	@printf "  view             Open local Auspice datasets with Nextstrain\n"
 	@printf "  clean            Remove workflow outputs and local caches\n"
 
@@ -43,6 +43,9 @@ copy-auspice:
 	cp phylogenetic/auspice/ortho_s.json auspice/hantavirus-nextstrain_S.json 2>/dev/null || true
 	cp phylogenetic/auspice/ortho_m.json auspice/hantavirus-nextstrain_M.json 2>/dev/null || true
 	cp phylogenetic/auspice/ortho_l.json auspice/hantavirus-nextstrain_L.json 2>/dev/null || true
+	cp phylogenetic/auspice/ortho_s_time.json auspice/hantavirus-nextstrain_S_time.json 2>/dev/null || true
+	cp phylogenetic/auspice/ortho_m_time.json auspice/hantavirus-nextstrain_M_time.json 2>/dev/null || true
+	cp phylogenetic/auspice/ortho_l_time.json auspice/hantavirus-nextstrain_L_time.json 2>/dev/null || true
 
 view:
 	auspice view --datasetDir auspice

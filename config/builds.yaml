@@ -23,6 +23,30 @@ builds:
     output: hantavirus-nextstrain_L
     priority: 2
     tree_mode: ml
+  ortho_s_time:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: "1980442"
+    scope: orthohantavirus
+    segment: s
+    output: hantavirus-nextstrain_S_time
+    priority: 3
+    tree_mode: timetree
+  ortho_m_time:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: "1980442"
+    scope: orthohantavirus
+    segment: m
+    output: hantavirus-nextstrain_M_time
+    priority: 3
+    tree_mode: timetree
+  ortho_l_time:
+    pathogen: Orthohantavirus
+    ncbi_taxon_id: "1980442"
+    scope: orthohantavirus
+    segment: l
+    output: hantavirus-nextstrain_L_time
+    priority: 3
+    tree_mode: timetree
 
 segment_lengths:
   s:

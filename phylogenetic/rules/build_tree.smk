@@ -2,6 +2,20 @@
 Build segment-specific maximum-likelihood trees.
 """
 
+
+def refine_args(wildcards):
+    current_build = build_config(wildcards)
+    if current_build.get("tree_mode") == "timetree":
+        clock_filter_iqd = current_build.get("clock_filter_iqd", 4)
+        return (
+            "--timetree "
+            "--coalescent opt "
+            "--date-confidence "
+            "--date-inference marginal "
+            f"--clock-filter-iqd {clock_filter_iqd}"
+        )
+    return "--keep-root"
+
 rule align:
     input:
         sequences="results/{build}/sequences.fasta",
@@ -49,6 +63,7 @@ rule refine:
         node_data="results/{build}/branch_lengths.json",
     params:
         strain_id_field=config["strain_id_field"],
+        refine_args=refine_args,
     log:
         "logs/{build}/refine.txt"
     shell:
@@ -61,7 +76,7 @@ rule refine:
             --metadata-id-columns {params.strain_id_field:q} \
             --output-tree {output.tree:q} \
             --output-node-data {output.node_data:q} \
-            --keep-root
+            {params.refine_args}
         """
 
 

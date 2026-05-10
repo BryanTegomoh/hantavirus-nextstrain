@@ -18,6 +18,11 @@
       "type": "categorical"
     },
     {
+      "key": "num_date",
+      "title": "Sampling date",
+      "type": "continuous"
+    },
+    {
       "key": "segment",
       "title": "Segment",
       "type": "categorical"
