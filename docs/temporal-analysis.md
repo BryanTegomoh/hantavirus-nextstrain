@@ -18,13 +18,22 @@ The temporal builds keep records with usable collection dates:
 - `month`
 - `year`
 
-Records with unknown date precision are excluded from time-resolved builds.
+Records with unknown date precision are excluded from time-resolved builds. The
+current public time builds also apply a lower cutoff of 2010 to sampled tip
+collection dates. No upper date cutoff is configured, so the latest retained
+tips depend on the eligible NCBI records present when the workflow is run.
 
 ## What The Time Axis Means
 
 The time-resolved builds use `augur refine --timetree` to estimate node dates
 from sampling dates and genetic divergence. In Auspice, this adds calendar-date
 coordinates (`num_date`) so the tree can be viewed with time on the x axis.
+
+The 2010 filter applies to sampled tips only. Internal node dates are model
+estimates from TreeTime. In a pan-Orthohantavirus tree, deep divergence can push
+some internal node estimates far earlier than the modern sampling window. Those
+dates should be treated as exploratory clock behavior, not as sampled records
+before 2010.
 
 The estimated rate should be interpreted separately for S, M, and L. A single
 pan-Orthohantavirus rate can be misleading because the dataset spans deep
